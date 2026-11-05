@@ -1,0 +1,113 @@
+:root {
+  --radius: 8px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-400: #a1a1aa;
+  --zinc-500: #71717a;
+  --zinc-600: #52525b;
+  --zinc-700: #3f3f46;
+  --zinc-800: #27272a;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+
+  --canvas: var(--zinc-100);
+  --bg: #ffffff;
+  --surface-1: #ffffff;
+  --surface-2: var(--zinc-50);
+  --surface-3: var(--zinc-100);
+  --border: var(--zinc-200);
+  --border-strong: var(--zinc-300);
+  --text: var(--zinc-950);
+  --text-muted: var(--zinc-500);
+  --text-faint: var(--zinc-400);
+  --overlay: color-mix(in srgb, var(--zinc-950) 40%, transparent);
+
+  --status-success: #16a34a;
+  --status-warning: #ca8a04;
+  --status-error: #dc2626;
+  --status-info: #2563eb;
+
+  --sidebar-width: 232px;
+  --inspector-width: 300px;
+  --row-height: 36px;
+  --control-size: 32px;
+  --icon-size: 16px;
+
+  --z-base: 0;
+  --z-sticky: 10;
+  --z-dropdown: 100;
+  --z-modal: 200;
+  --z-popover: 260;
+  --z-toast: 300;
+
+  --font: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  font-family: var(--font);
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--text);
+  background: var(--canvas);
+  font-feature-settings: "ss01" on, "cv11" on;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--zinc-950);
+    --canvas: var(--zinc-950);
+    --surface-1: var(--zinc-900);
+    --surface-2: var(--zinc-800);
+    --surface-3: var(--zinc-800);
+    --border: var(--zinc-800);
+    --border-strong: var(--zinc-700);
+    --text: var(--zinc-50);
+    --text-muted: var(--zinc-400);
+    --text-faint: var(--zinc-500);
+    --overlay: color-mix(in srgb, var(--zinc-950) 64%, transparent);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--text);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+[role="option"]:focus-visible {
+  outline: 1px solid var(--text);
+  outline-offset: 1px;
+}
+
+::selection {
+  background: var(--text);
+  color: var(--bg);
+}

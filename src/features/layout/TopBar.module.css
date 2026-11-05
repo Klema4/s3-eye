@@ -1,0 +1,151 @@
+.bar {
+  display: grid;
+  grid-template-columns: minmax(160px, 220px) minmax(180px, 1fr) auto;
+  grid-template-areas:
+    "identity search actions"
+    "crumbs crumbs crumbs";
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  padding: var(--space-3) var(--space-4) 0;
+  background: var(--surface-1);
+}
+
+.identity {
+  grid-area: identity;
+  min-width: 0;
+}
+
+.kicker {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-faint);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search {
+  grid-area: search;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0 var(--space-2) 0 var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  color: var(--text-muted);
+  cursor: pointer;
+  text-align: left;
+}
+
+.search span {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search kbd {
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: var(--space-1);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface-1);
+  color: var(--text-muted);
+}
+
+.actions {
+  grid-area: actions;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-1);
+}
+
+.crumbRow {
+  grid-area: crumbs;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: 36px;
+  margin: var(--space-1) calc(var(--space-4) * -1) 0;
+  padding: 0 var(--space-4);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.crumbWrap {
+  display: inline-flex;
+  align-items: center;
+}
+
+.sep {
+  color: var(--text-muted);
+}
+
+.crumb {
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  height: 24px;
+  padding: 0 var(--space-2);
+  border-radius: 6px;
+}
+
+.crumb:hover {
+  color: var(--text);
+  background: var(--surface-2);
+}
+
+.filter {
+  margin-left: auto;
+}
+
+.filter input {
+  width: 180px;
+  height: 26px;
+  padding: 0 var(--space-2);
+  border: 0;
+  background: transparent;
+  color: var(--text);
+}
+
+.filter input::placeholder {
+  color: var(--text-muted);
+}
+
+.filter input:focus {
+  outline: none;
+}
+
+.parent {
+  width: 100%;
+  height: var(--row-height);
+  text-align: left;
+  padding: 0 var(--space-4);
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.parent:hover {
+  color: var(--text);
+  background: var(--surface-3);
+}
